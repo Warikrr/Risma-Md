@@ -36,7 +36,7 @@ global.wait = '_*ѕє∂αηg ∂ι ρяσѕєѕ...*_'
 global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ...*_'
 
 //========Url Template Buttons=========//
-global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
+global.dtu = 'ιɴѕтαgʀαм'
 global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons =============//
