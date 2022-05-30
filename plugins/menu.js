@@ -5,27 +5,29 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ *${global.ucapan} %name*
+┏──『 𝘽𝙊𝙏𝘾𝘼𝙃𝙓 』──⬣
+│⬡ *${global.ucapan} %name*
 │
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
+│⬡ *Tersisa* : %limit Limit
+│⬡ *Role* : %role
+│⬡ *Level* : %level (%exp / %maxexp)
+│⬡ *Exp* : %totalexp XP
 │
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
+│⬡ *Hari* : %week %weton 
+│⬡ *Tanggal* : %week %weton, %date
+│⬡ *Tanggal* : Islam : %dateIslamic
+│⬡ *Waktu* : *%time
 │
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+│⬡ *Uptime* : %uptime (%muptime)
+│⬡ *Database* : %rtotalreg dari %totalreg
+│⬡ *Memory Used* : ${ramDipake}MB / ${totalram}MB
+│⬡ *Instagram* :
+│⬡ https://instagram.com/mursid.st
+┗─────────────⬣
 %readmore`.trim(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  header: '┏──『 %category 』─⬣',
+  body: '│⬡%cmd %islimit %isPremium',
+  footer: '┗─────────⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -275,7 +277,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}infobot`)
+    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ιɴƒσ мυʀѕι∂`, `${_p}infomursid`, `∂σηαѕι`, `${_p}donasi`)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
