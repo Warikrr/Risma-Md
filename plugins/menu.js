@@ -16,17 +16,16 @@ const defaultMenu = {
 │⬡ *Hari* : %week %weton 
 │⬡ *Tanggal* : %week %weton, %date
 │⬡ *Tanggal* : Islam : %dateIslamic
-│⬡ *Waktu* : *%time
+│⬡ *Waktu* : %time
 │
 │⬡ *Uptime* : %uptime (%muptime)
 │⬡ *Database* : %rtotalreg dari %totalreg
-│⬡ *Memory Used* : ${ramDipake}MB / ${totalram}MB
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
 ┗─────────────⬣
 %readmore`.trim(),
   header: '┏──『 %category 』─⬣',
-  body: '│⬡%cmd %islimit %isPremium',
+  body: '│⬡ %cmd %islimit %isPremium',
   footer: '┗─────────⬣\n',
   after: `
 *%npmname@^%version*
@@ -136,10 +135,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let { exp, limit, age, money, level, role, registered } = global.db.data.users[m.sender]
+    let { exp, limit, age, money, level, role, registered } = global.db.data.home[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let umur = `*${age == '-1' ? 'Belum Daftar*' : age + '* Thn'}`
-    let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
+    let name = registered ? global.db.data.home[m.sender].name : conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
@@ -175,8 +174,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     global.jam = time
-    let totalreg = Object.keys(global.db.data.users).length
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let totalreg = Object.keys(global.db.data.home).length
+    let rtotalreg = Object.values(global.db.data.home).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
@@ -266,7 +265,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       p: _p, uptime, muptime,
       me: conn.user.name,
       npmname: package.name,
-      npmdesc: package.description,
+      npmdes package.description,
       version: package.version,
       exp: exp - min,
       maxexp: xp,
@@ -277,7 +276,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ιɴƒσ мυʀѕι∂`, `${_p}infomursid`, `∂σηαѕι`, `${_p}donasi`)
+    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `тнαηкѕ тσ`, `${_p}tqto`, `∂σηαѕι`, `${_p}infobot`)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
