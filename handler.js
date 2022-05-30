@@ -30,17 +30,14 @@ module.exports = {
         global.namabot = conn.user.name
         global.packname = global.namabot
         global.author = global.data.owner
-        //global.author = '𝑨𝒈𝒖𝒛 𝑭𝒂𝒎𝒊𝒍𝒊𝒂'
+        //global.author = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = namabot + ' ву ƒσкυѕ ι∂'
+        global.wm = '𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'ʙy ᴀɢᴜᴢ ꜰᴀᴍɪʟɪᴀ'
+        global.colong2 = '𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
         global.kontak2 = [
-        ['6281320170984', '𝘼𝙜𝙪𝙯 𝙁𝙖𝙢𝙞𝙡𝙞𝙖', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'FokusDotId13@gmail.com', true],
-        ['6283823916413', await this.getName('6283823916413@s.whatsapp.net'), 'ᴄꜱ ꜰᴀᴍɪʟy-ʙᴏᴛ', 'sa0066588@gmail.com', true],
-        ['6285157436653', '𝙴𝙽𝙹𝙴𝙻𝙰-𝙱𝙾𝚃', 'Bot WhatsApp', 'Nothing!', true],
-        ['6288276639962', await this.getName('6288276639962@s.whatsapp.net'), 'ᴄꜱ ꜰᴀᴍɪʟy-ʙᴏᴛ', 'khasanahmarifatul28@gmail.com', true],
-        ['6285669524800', await this.getName('6285669524800@s.whatsapp.net'), 'ᴄꜱ ꜰᴀᴍɪʟy-ʙᴏᴛ', 'rykkalieeofficiall@gmail.com', true],
+        ['6288233832771', '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'mursidmulo@gmail.com', true],
+        ['6289612698583', await this.getName('6289612698583@s.whatsapp.net'), 'Bot WhatsApp', 'akunsesi021@gmail.com', true], 
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -741,18 +738,18 @@ fs.watchFile(file, () => {
 
 function ucapan() {
     const time = moment.tz('Asia/Jakarta').format('HH')
-    let res = "Selamat malam 🌙"
+    let res = "Selamat malam"
     if (time >= 4) {
-        res = "Selamat pagi 🌄"
+        res = "Selamat pagi"
     }
     if (time > 10) {
-        res = "Selamat siang ☀️"
+        res = "Selamat siang"
     }
     if (time >= 15) {
-        res = "Selamat sore 🌅"
+        res = "Selamat sore"
     }
     if (time >= 18) {
-        res = "Selamat malam 🌙"
+        res = "Selamat malam"
     }
     return res
 }
