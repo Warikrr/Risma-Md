@@ -6,25 +6,25 @@ let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
 ┏──『 𝘽𝙊𝙏𝘾𝘼𝙃𝙓 』──⬣
-│⬡ *${global.ucapan} %name*
+│⬡  *${global.ucapan} %name*
 │
-│⬡ *Tersisa* : %limit Limit
-│⬡ *Role* : %role
-│⬡ *Level* : %level (%exp / %maxexp)
-│⬡ *Exp* : %totalexp XP
+│⬡  *Tersisa* : %limit Limit
+│⬡  *Role* : %role
+│⬡  *Level* : %level [%exp / %maxexp]
+│⬡  *Exp* : %totalexp XP
 │
-│⬡ *Hari* : %week %weton 
-│⬡ *Tanggal* : %week %weton, %date
-│⬡ *Tanggal* : Islam : %dateIslamic
-│⬡ *Waktu* : %time
+│⬡  *Hari* : %week %weton 
+│⬡  *Tanggal* : %week %weton, %date
+│⬡  *Tanggal Islam* : %dateIslamic
+│⬡  *Waktu* : %time
 │
-│⬡ *Uptime* : %uptime (%muptime)
+│⬡ *Uptime* : %uptime
 │⬡ *Database* : %rtotalreg dari %totalreg
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
 ┗─────────────⬣
 %readmore`.trim(),
-  header: '┏──『 %category 』─⬣',
+  header: '┏──『 %category 』──⬣', 
   body: '│⬡ %cmd %islimit %isPremium',
   footer: '┗─────────⬣\n',
   after: `
@@ -39,7 +39,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'Utama',
+    'main': 'UTAMA',
     'game': 'Game',
     'rpg': 'RPG',
     'xp': 'Exp & Limit',
@@ -135,10 +135,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   try {
     let package = JSON.parse(await fs.promises.readFile(path.join(__dirname, '../package.json')).catch(_ => '{}'))
-    let { exp, limit, age, money, level, role, registered } = global.db.data.home[m.sender]
+    let { exp, limit, age, money, level, role, registered } = global.db.data.users[m.sender]
     let { min, xp, max } = levelling.xpRange(level, global.multiplier)
     let umur = `*${age == '-1' ? 'Belum Daftar*' : age + '* Thn'}`
-    let name = registered ? global.db.data.home[m.sender].name : conn.getName(m.sender)
+    let name = registered ? global.db.data.users[m.sender].name : conn.getName(m.sender)
     let d = new Date(new Date + 3600000)
     let locale = 'id'
     // d.getTimeZoneOffset()
@@ -174,8 +174,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     let muptime = clockString(_muptime)
     let uptime = clockString(_uptime)
     global.jam = time
-    let totalreg = Object.keys(global.db.data.home).length
-    let rtotalreg = Object.values(global.db.data.home).filter(user => user.registered == true).length
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
     let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
       return {
         help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
@@ -190,7 +190,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'List Menu ' + namabot,
+        title: 'List Menu 𝘽𝙊𝙏𝘾𝘼𝙃𝙓' ,
         rows: [
           { title: 'Semua Perintah', rowId: `${_p}? all` },
           { title: 'Game', rowId: `${_p}? game` },
@@ -265,7 +265,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       p: _p, uptime, muptime,
       me: conn.user.name,
       npmname: package.name,
-      npmdes package.description,
+      npmdesc: package.description,
       version: package.version,
       exp: exp - min,
       maxexp: xp,
@@ -276,7 +276,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `тнαηкѕ тσ`, `${_p}tqto`, `∂σηαѕι`, `${_p}infobot`)
+    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `тнαηкѕ тσ`, `${_p}tqto`, `∂σηαѕι`, `${_p}donasi`)
   } catch (e) {
     conn.reply(m.chat, 'Maaf, menu sedang error', m)
     throw e
