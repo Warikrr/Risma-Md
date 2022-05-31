@@ -1,7 +1,7 @@
 {
     "name": "𝘽𝙊𝙏𝘾𝘼𝙃𝙓",
     "version": "2.2.5",
-    "description": "𝘾𝙪𝙨𝙩𝙤𝙢𝙞𝙯𝙖𝙗𝙡𝙚 𝙒𝙝𝙖𝙩𝙨𝘼𝙥𝙥 𝘽𝙤𝙩 𝙈𝘿",
+    "description": "Customizable WhatsApp Bot",
     "depecrated": false,
     "main": "index.js",
     "directories": {
