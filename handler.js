@@ -32,9 +32,9 @@ module.exports = {
         global.author = global.data.owner
         //global.author = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
+        global.wm = '© 𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = '𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
+        global.colong2 = '© 𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
         global.kontak2 = [
         ['6288233832771', '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'mursidmulo@gmail.com', true],
         ['6289612698583', await this.getName('6289612698583@s.whatsapp.net'), 'Bot WhatsApp', 'akunsesi021@gmail.com', true], 
