@@ -36,17 +36,17 @@ global.wait = '_*ѕє∂αηg ∂ι ρяσѕєѕ...*_'
 global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ...*_'
 
 //========Url Template Buttons=========//
-global.dtu = 'ιɴѕтαgʀαм'
+global.dtu = 'ɪηѕтαgʀαм'
 global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons =============//
-global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
+global.dtc = 'ᴄαℓℓ σωηєʀ'
 global.phn = '+62 882-3383-2771'
 
 //============= Games ================//
 global.benar = '_*Benar*_'
 global.salah = '_*Salah*_'
-global.dikit = "dikit lagi kak"
+global.dikit = "dikit lagi"
 
 global.multiplier = 100 // The higher, The harder levelup
 
