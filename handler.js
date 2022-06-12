@@ -32,9 +32,9 @@ module.exports = {
         global.author = global.data.owner
         //global.author = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '© 𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
+        global.wm = '© мυʀѕι∂ вσт'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = '© 𝘽𝙊𝙏𝘾𝘼𝙃𝙓'
+        global.colong2 = 'мυʀѕι∂ вσт'
         global.kontak2 = [
         ['6288233832771', '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'mursidmulo@gmail.com', true],
         ['6289612698583', await this.getName('6289612698583@s.whatsapp.net'), 'Bot WhatsApp', 'akunsesi021@gmail.com', true], 
@@ -764,7 +764,7 @@ function pickRandom(list) {
   return list[Math.floor(list.length * Math.random())]
 }
 
-global.thumb = 'https://telegra.ph/file/61f2d6d9694b49a2ce7aa.jpg'
+global.thumb = 'https://telegra.ph/file/538d54a829bd198085a87.jpg'
 
 global.flaaa = [
  'https://flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=water-logo&script=water-logo&fontsize=90&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&fillTextColor=%23000&shadowGlowColor=%23000&backgroundColor=%23000&text=',
