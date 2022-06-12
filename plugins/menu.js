@@ -5,21 +5,22 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┏──『 𝘽𝙊𝙏𝘾𝘼𝙃𝙓 』──⬣
-│⬡  *${global.ucapan} %name*
+┏──『 мυяѕι∂ вσт 』──⬣
+│⬡ *Hai*, %name
 │
-│⬡  *Tersisa* : %limit Limit
-│⬡  *Role* : %role
-│⬡  *Level* : %level [%exp / %maxexp]
-│⬡  *Exp* : %totalexp XP
+│⬡ *Tersisa* : %limit Limit
+│⬡ *Role* : %role
+│⬡ *Level* : %level [%exp / %maxexp]
+│⬡ *Exp* : %totalexp XP
 │
-│⬡  *Hari* : %week %weton 
-│⬡  *Tanggal* : %week %weton, %date
-│⬡  *Tanggal Islam* : %dateIslamic
-│⬡  *Waktu* : %time
+│⬡ *Hari* : %week %weton 
+│⬡ *Tanggal* : %week %weton, %date
+│⬡ *Tanggal Islam* : %dateIslamic
+│⬡ *Waktu* : %time
 │
 │⬡ *Uptime* : %uptime
 │⬡ *Database* : %rtotalreg dari %totalreg
+│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
 ┗─────────────⬣
@@ -190,7 +191,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'List Menu 𝘽𝙊𝙏𝘾𝘼𝙃𝙓' ,
+        title: 'ℓιѕт мєηυ мυяѕι∂ вσт' ,
         rows: [
           { title: 'Semua Perintah', rowId: `${_p}? all` },
           { title: 'Game', rowId: `${_p}? game` },
