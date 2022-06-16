@@ -5,7 +5,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┏──『 мυяѕι∂ вσт 』──⬣
+┌──『 мυяѕι∂ вσт 』──⬣
 │⬡ *Hai*, %name
 │
 │⬡ *Tersisa* : %limit Limit
@@ -23,11 +23,11 @@ const defaultMenu = {
 │⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
-┗─────────────⬣
+└─────────────⬣
 %readmore`.trim(),
-  header: '┏──『 %category 』──⬣', 
+  header: '┌──『 %category 』──⬣', 
   body: '│⬡ %cmd %islimit %isPremium',
-  footer: '┗─────────⬣\n',
+  footer: '└─────────⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -223,6 +223,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       footer: wm,
       mentions: await conn.parseMention(judul),
       title: '',
+      footerText: "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner."
       buttonText: "Klik Disini",
       sections
     }
