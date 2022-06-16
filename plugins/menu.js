@@ -25,9 +25,9 @@ const defaultMenu = {
 │⬡ https://instagram.com/mursid.st
 └─────────────⬣
 %readmore`.trim(),
-  header: '┌──『 %category 』──⬣', 
+  header: '┌──『 %category 』──⬣',
   body: '│⬡ %cmd %islimit %isPremium',
-  footer: '└─────────⬣\n',
+  footer: '└────────⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -40,7 +40,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'UTAMA',
+    'main': 'Utama',
     'game': 'Game',
     'rpg': 'RPG',
     'xp': 'Exp & Limit',
@@ -191,7 +191,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'ℓιѕт мєηυ мυяѕι∂ вσт' ,
+        title: 'ℓιѕт мєηυ' + namabot,
         rows: [
           { title: 'Semua Perintah', rowId: `${_p}? all` },
           { title: 'Game', rowId: `${_p}? game` },
@@ -222,8 +222,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       text: judul,
       footer: wm,
       mentions: await conn.parseMention(judul),
-      title: '',
-      footerText: "Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner."
+      title: 'Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.',
       buttonText: "Klik Disini",
       sections
     }
@@ -264,6 +263,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = typeof conn.menu == 'string' ? conn.menu : typeof conn.menu == 'object' ? _text : ''
     let replace = {
       '%': '%',
+      ucapan: global.ucapan,
       p: _p, uptime, muptime,
       me: conn.user.name,
       npmname: package.name,
