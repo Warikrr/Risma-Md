@@ -222,7 +222,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       text: judul,
       footer: wm,
       mentions: await conn.parseMention(judul),
-      title: 'Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada owner.',
+      title: '',
       buttonText: "Klik Disini",
       sections
     }
