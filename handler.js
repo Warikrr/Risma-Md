@@ -32,12 +32,12 @@ module.exports = {
         global.author = global.data.owner
         //global.author = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '© мυʀѕι∂ вσт'
+        global.wm = '© 𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'мυʀѕι∂ вσт'
+        global.colong2 = '𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻'
         global.kontak2 = [
-        ['6288233832771', '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎', 'ᴅᴇᴠᴇʟᴏᴩᴇʀ ʙᴏᴛ', 'mursidmulo@gmail.com', true],
-        ['6289612698583', await this.getName('6289612698583@s.whatsapp.net'), 'Bot WhatsApp', 'akunsesi021@gmail.com', true], 
+        ['6288233832771', 'Mursid S', '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝒃𝒐𝒕', 'mursid@gmail.com', true],
+        ['6285893590312', await this.getName('6285893590312@s.whatsapp.net'), 'Nadia', 'nadia@gmail.com', true], 
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
