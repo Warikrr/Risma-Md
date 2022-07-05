@@ -5,9 +5,9 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌──『 𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻 』──⬣
+┏━──『 𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻 』──⬣
 │⬡ *Hai*, %name
-│
+│  
 │⬡ *Tersisa* : %limit Limit
 │⬡ *Role* : %role
 │⬡ *Level* : %level [%exp / %maxexp]
@@ -23,11 +23,11 @@ const defaultMenu = {
 │⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 │⬡ *Instagram* :
 │⬡ https://instagram.com/mursid.st
-└─────────────⬣
+┗━────────────⬣
 %readmore`.trim(),
-  header: '┌──『 %category 』──⬣',
+  header: '┏━──『 %category 』──⬣',
   body: '│⬡ %cmd %islimit %isPremium',
-  footer: '└────────⬣\n',
+  footer: '┗━───────⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
