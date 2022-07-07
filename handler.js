@@ -30,14 +30,14 @@ module.exports = {
         global.namabot = conn.user.name
         global.packname = global.namabot
         global.author = global.data.owner
-        //global.author = '𝙈𝙪𝙧𝙨𝙞𝙙 𝙎'
+        //global.author = '𝘔𝘶𝘳𝘴𝘪𝘥 𝘚'
         global.wm2 = global.data.namabot + ' ' + global.data.owner
-        global.wm = '© 𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻'
+        global.wm = '© 𝑵𝒂𝒅𝒊𝒂 𝑩𝒐𝒕'
         global.colong1 = 'Ciss 📸'
-        global.colong2 = '𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻'
+        global.colong2 = '𝑵𝒂𝒅𝒊𝒂 𝑩𝒐𝒕'
         global.kontak2 = [
-        ['6288233832771', 'Mursid S', '𝒅𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝒃𝒐𝒕', 'mursid@gmail.com', true],
-        ['6285893590312', await this.getName('6285893590312@s.whatsapp.net'), 'Nadia', 'nadia@gmail.com', true], 
+        ['6288233832771', '𝘔𝘶𝘳𝘴𝘪𝘥 𝘚', '𝑫𝒆𝒗𝒆𝒍𝒐𝒑𝒆𝒓 𝑩𝒐𝒕', 'mursid@gmail.com', true],
+        ['6285893590312', await this.getName('6285893590312@s.whatsapp.net'), '𝑷𝒂𝒓𝒕𝒏𝒆𝒓 𝑵𝒂𝒅𝒊𝒂 𝑩𝒐𝒕', 'nadia@gmail.com', true], 
         ]
         global.bg = await (await fetch(img)).buffer()
         global.time = require('moment-timezone').tz('Asia/Jakarta').format('HH:mm:ss')
@@ -717,7 +717,7 @@ global.dfail = async (type, m, conn) => {
         private: 'Perintah ini hanya dapat digunakan di Chat Pribadi!',
         admin: 'Perintah ini hanya untuk *Admin* grup!',
         botAdmin: 'Jadikan bot sebagai *Admin* untuk menggunakan perintah ini!',
-        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Manusia.16*',
+        unreg: 'Silahkan daftar untuk menggunakan fitur ini dengan cara mengetik:\n\n*#daftar nama.umur*\n\nContoh: *#daftar Nadia.18*',
         nsfw: `NSFW tidak aktif, Silahkan hubungi Team Bot Discussion untuk mengaktifkan fitur ini!`,
         rpg: `RPG tidak aktif, Silahkan hubungi Team Bot Discussion Untuk mengaktifkan fitur ini!`,
         restrict: 'Fitur ini di *disable*!'
