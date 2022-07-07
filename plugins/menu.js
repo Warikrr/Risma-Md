@@ -5,29 +5,35 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┏━──『 𝑵𝑨𝑫𝑰𝑨 𝑩𝑶𝑻 』──⬣
-│⬡ *Hai*, %name
-│  
-│⬡ *Tersisa* : %limit Limit
-│⬡ *Role* : %role
-│⬡ *Level* : %level [%exp / %maxexp]
-│⬡ *Exp* : %totalexp XP
-│
-│⬡ *Hari* : %week %weton 
-│⬡ *Tanggal* : %week %weton, %date
-│⬡ *Tanggal Islam* : %dateIslamic
-│⬡ *Waktu* : %time
-│
-│⬡ *Uptime* : %uptime
-│⬡ *Database* : %rtotalreg dari %totalreg
-│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│⬡ *Instagram* :
-│⬡ https://instagram.com/mursid.st
-┗━────────────⬣
+┏───────────────⬣
+┆   『 𝑯𝒂𝒊, %name 』
+┗┬──────────────⬣
+┏┆⬡ *Tersisa* : %limit Limit
+┆┆⬡ *Role* : %role
+┆┆⬡ *Level* : %level [%exp / %maxexp]
+┆┆⬡ *Exp* : %totalexp XP
+┗┬──────────────⬣
+┏┤ 『 𝑲𝒂𝒍𝒆𝒏𝒅𝒆𝒓 』
+┆┗──────────────⬣
+┆⬡ *Hari* : %week %weton
+┆⬡ *Tanggal* : %week %weton, %date
+┆⬡ *Tanggal Islam* : %dateIslamic
+┆⬡ *Waktu* : %time
+┗┬──────────────⬣
+┏┤ 『 𝑩𝒐𝒕 𝒊𝒏𝒇𝒐 』
+┆┗──────────────⬣
+┆⬡ *Uptime* : %uptime
+┆⬡ *Run Bot* : Panel/RDP
+┆⬡ *Bailyes Version* : 4.2.0
+┆⬡ *Database* : %rtotalreg dari %totalreg
+┆⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+┆⬡ *Instagram* :
+┆⬡ https://instagram.com/mursid.st
+┗─────────────────⬣
 %readmore`.trim(),
-  header: '┏━──『 %category 』──⬣',
-  body: '│⬡ %cmd %islimit %isPremium',
-  footer: '┗━───────⬣\n',
+  header: '┏━┈┈『 %category 』┈┈⬣',
+  body: '┆⬡ %cmd %islimit %isPremium',
+  footer: '┗━┈┈┈┈┈┈┉⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -191,7 +197,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'ℓιѕт мєηυ' + namabot,
+        title: '𝒍𝒊𝒔𝒕 𝒎𝒆𝒏𝒖 𝒏𝒂𝒅𝒊𝒂 𝒃𝒐𝒕',
         rows: [
           { title: 'Semua Perintah', rowId: `${_p}? all` },
           { title: 'Game', rowId: `${_p}? game` },
@@ -280,7 +286,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `𝑷𝒆𝒎𝒊𝒍𝒊𝒌 𝑩𝒐𝒕`, `${_p}owner`, `𝑻𝒉𝒂𝒏𝒌𝒔 𝑻𝒐𝒐`, `${_p}tqto`, `𝑫𝒐𝒏𝒂𝒔𝒊`, `${_p}donasi`)
   } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    conn.reply(m.chat, '𝑴𝒂𝒂𝒇, 𝒎𝒆𝒏𝒖 𝒔𝒆𝒅𝒂𝒏𝒈 𝒆𝒓𝒓𝒐𝒓', m)
     throw e
   }
 }
