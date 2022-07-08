@@ -5,23 +5,23 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┏───────────────⬣
-┆  『 𝑯𝒂𝒊, %name 』
-┗┬──────────────⬣
+┏─────────────────⬣
+┆   *Hai*, %name 
+┗┬──────────────┈ ⳹
 ┏┆⬡ *Tersisa* : %limit Limit
 ┆┆⬡ *Role* : %role
 ┆┆⬡ *Level* : %level [%exp / %maxexp]
 ┆┆⬡ *Exp* : %totalexp XP
-┗┬──────────────⬣
-┏┤ 『 𝑲𝒂𝒍𝒆𝒏𝒅𝒆𝒓 』
-┆┗──────────────⬣
+┗┬──────────────┈ ⳹
+┏┤   *Kalender*
+┆┗──────────────┈ ⳹
 ┆⬡ *Hari* : %week %weton
 ┆⬡ *Tanggal* : %week %weton, %date
 ┆⬡ *Tanggal Islam* : %dateIslamic
 ┆⬡ *Waktu* : %time
-┗┬──────────────⬣
-┏┤ 『 𝑩𝒐𝒕 𝒊𝒏𝒇𝒐 』
-┆┗──────────────⬣
+┗┬──────────────┈ ⳹
+┏┤   *Bot info*
+┆┗──────────────┈ ⳹
 ┆⬡ *Uptime* : %uptime
 ┆⬡ *Run Bot* : Panel/RDP
 ┆⬡ *Bailyes Version* : 4.2.0
@@ -33,7 +33,7 @@ const defaultMenu = {
 %readmore`.trim(),
   header: '┏━┈┈『 %category 』┈┈⬣',
   body: '┆⬡ %cmd %islimit %isPremium',
-  footer: '┗━┈┈┈┈┈┈┉⬣\n',
+  footer: '┗━───────⬣\n',
   after: `
 *%npmname@^%version*
 ${'```%npmdesc```'}
@@ -197,30 +197,32 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: '𝒍𝒊𝒔𝒕 𝒎𝒆𝒏𝒖 𝒏𝒂𝒅𝒊𝒂 𝒃𝒐𝒕',
+        title: 'ℓιѕт мєηυ ηα∂ια вσт',
         rows: [
-          { title: 'Semua Perintah', rowId: `${_p}? all` },
-          { title: 'Game', rowId: `${_p}? game` },
-          { title: 'XP', rowId: `${_p}? xp` },
-          { title: 'Stiker', rowId: `${_p}? stiker` },
-          { title: 'Kerang Ajaib', rowId: `${_p}? kerangajaib` },
-          { title: 'Quotes', rowId: `${_p}? quotes` },
-          { title: 'Grup', rowId: `${_p}? grup` },
-          { title: 'Premium', rowId: `${_p}? premium` },
-          { title: 'Internet', rowId: `${_p}? internet` },
-          { title: 'Anonymous', rowId: `${_p}? anonymous` },
-          { title: 'Nulis & Logo', rowId: `${_p}? nulis` },
-          { title: 'Downloader', rowId: `${_p}? downloader` },
-          { title: 'Tools', rowId: `${_p}? tools` },
-          { title: 'Fun', rowId: `${_p}? fun`},
-          { title: 'Database', rowId: `${_p}? database` },
-          { title: 'Vote & Absen', rowId: `${_p}? vote` },
+          { title: 'all', rowId: `${_p}? all` },
+          { title: 'info nadia', rowId: `${_p}? infonadia` },
+          { title: 'info mursid', rowId: `${_p}? infomursid` },
+          { title: 'game', rowId: `${_p}? game` },
+          { title: 'xp', rowId: `${_p}? xp` },
+          { title: 'stiker', rowId: `${_p}? stiker` },
+          { title: 'kerang ajaib', rowId: `${_p}? kerangajaib` },
+          { title: 'quotes', rowId: `${_p}? quotes` },
+          { title: 'grup', rowId: `${_p}? grup` },
+          { title: 'premium', rowId: `${_p}? premium` },
+          { title: 'internet', rowId: `${_p}? internet` },
+          { title: 'anonymous', rowId: `${_p}? anonymous` },
+          { title: 'nulis & Logo', rowId: `${_p}? nulis` },
+          { title: 'downloader', rowId: `${_p}? downloader` },
+          { title: 'tools', rowId: `${_p}? tools` },
+          { title: 'fun', rowId: `${_p}? fun`},
+          { title: 'database', rowId: `${_p}? database` },
+          { title: 'vote & Absen', rowId: `${_p}? vote` },
           { title: "Al-Qur\'an", rowId: `${_p}? quran` },
-          { title: 'Pengubah Suara', rowId: `${_p}? audio` },
-          { title: 'Jadi Bot', rowId: `${_p}? jadibot` },
-          { title: 'Info', rowId: `${_p}? info` },
-          { title: 'Tanpa Kategori', rowId: `${_p}? tanpakategori` },
-          { title: 'Owner', rowId: `${_p}? owner` },
+          { title: 'pengubah suara', rowId: `${_p}? audio` },
+          { title: 'jadi bot', rowId: `${_p}? jadibot` },
+          { title: 'info', rowId: `${_p}? info` },
+          { title: 'tanpa kategori', rowId: `${_p}? tanpakategori` },
+          { title: 'owner', rowId: `${_p}? owner` },
         ]
       }
     ]
