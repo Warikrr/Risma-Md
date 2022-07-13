@@ -29,6 +29,8 @@ Rasel:
 https://github.com/raselcomel
 Mursid:
 https://github.com/Botwa021
+Jarot:
+https://github.com/Alpiii22
 
 \`\`\`${conn.user.name}\`\`\`
 `
