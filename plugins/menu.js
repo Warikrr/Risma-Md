@@ -28,7 +28,7 @@ const defaultMenu = {
 ┆⬡ *Database* : %rtotalreg dari %totalreg
 ┆⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ┆⬡ *Instagram* :
-┆⬡ https://instagram.com/mursid.st
+┆⬡ https://instagram.com/oscarbotz_
 ┗─────────────────⬣
 %readmore`.trim(),
   header: '┏━┈┈『 %category 』┈┈⬣',
@@ -197,11 +197,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'ℓιѕт мєηυ ηα∂ια вσт',
+        title: '𝐥𝐢𝐬𝐭 𝐦𝐞𝐧𝐮 𝐫𝐢𝐬𝐦𝐚 𝐛𝐨𝐭',
         rows: [
           { title: 'all', rowId: `${_p}? all` },
-          { title: 'info nadia', rowId: `${_p}? infonadia` },
-          { title: 'info mursid', rowId: `${_p}? infomursid` },
+          { title: 'info risma', rowId: `${_p}? infonadia` },
+          { title: 'info Jarot', rowId: `${_p}? infomursid` },
           { title: 'game', rowId: `${_p}? game` },
           { title: 'xp', rowId: `${_p}? xp` },
           { title: 'stiker', rowId: `${_p}? stiker` },
