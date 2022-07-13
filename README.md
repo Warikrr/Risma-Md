@@ -1,1 +1,3 @@
-## anu😣
+#Jarot Md
+
+#NOTE: DILARANG MENJUAL BELIKAN SCRIPT 
