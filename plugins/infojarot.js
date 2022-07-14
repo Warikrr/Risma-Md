@@ -22,7 +22,7 @@ conn.reply(m.chat, `
 
 handler.help = ['infojarot']
 handler.tags = ['main', 'utama']
-handler.command = /^(infomursid)$/i
+handler.command = /^(infojarot)$/i
 
 handler.exp = 150
 
