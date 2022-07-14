@@ -197,11 +197,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: '𝐥𝐢𝐬𝐭 𝐦𝐞𝐧𝐮 𝐫𝐢𝐬𝐦𝐚 𝐛𝐨𝐭',
+        title: '𝐥𝐢𝐬𝐭 𝐦𝐞𝐧𝐮 𝐀𝐥𝐩𝐢 𝐛𝐨𝐭',
         rows: [
-          { title: 'all', rowId: `${_p}? all` },
-          { title: 'info risma', rowId: `${_p}? infonadia` },
-          { title: 'info Jarot', rowId: `${_p}? infomursid` },
+          { title: 'allmenu', rowId: `${_p}? all` },
+          { title: 'info alpi', rowId: `${_p}? infonadia` },
+          { title: 'info jarot', rowId: `${_p}? infomursid` },
           { title: 'game', rowId: `${_p}? game` },
           { title: 'xp', rowId: `${_p}? xp` },
           { title: 'stiker', rowId: `${_p}? stiker` },
