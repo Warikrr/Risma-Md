@@ -1,28 +1,56 @@
+/*const { youtubeSearch } = require('@bochilteam/scraper')
+let handler = async (m, { text }) => {
+  if (!text) throw 'Cari apa?'
+  const { video, channel } = await youtubeSearch(text)
+  let teks = [...video, ...channel].map(v => {
+    switch (v.type) {
+      case 'video': return `
+📌 *${v.title}* (${v.url})
+⌚ Duration: ${v.durationH}
+⏲️ Uploaded ${v.publishedTime}
+👁️ ${v.view} views
+      `.trim()
+      case 'channel': return `
+📌 *${v.channelName}* (${v.url})
+🧑‍🤝‍🧑 _${v.subscriberH} (${v.subscriber}) Subscriber_
+🎥 ${v.videoCount} video
+`.trim()
+    }
+  }).filter(v => v).join('\n\n========================\n\n')
+  m.reply(teks)
+}
+handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
+handler.tags = ['tools']
+handler.command = /^yts(earch)?$/i
+
+module.exports = handler*/
+
+
 let yts = require('yt-search')
-let handler = async (m, { conn, text }) => {
-  if (!text) return conn.reply(m.chat, 'Cari apa?', m)
+let handler = async (m, { text }) => {
+  if (!text) throw 'Cari apa?'
   let results = await yts(text)
   let teks = results.all.map(v => {
     switch (v.type) {
       case 'video': return `
-*Judul:* ${v.title} 
-*Link:* (${v.url})
-*Duration:* ${v.timestamp}
-*Uploaded:* ${v.ago}
-*Viewer:* ${v.views} 
- `.trim()
+*${v.title}* (${v.url})
+Duration: ${v.timestamp}
+Uploaded ${v.ago}
+${v.views} views
+      `.trim()
       case 'channel': return `
-*Chanel:* ${v.name} 
-*Link:* (${v.url})
-*Subscriber:* ${v.subCountLabel} (${v.subCount})
-*Total Video:* ${v.videoCount} video
+*${v.name}* (${v.url})
+_${v.subCountLabel} (${v.subCount}) Subscriber_
+${v.videoCount} video
 `.trim()
     }
-  }).filter(v => v).join('\n\n*=========================*\n\n')
- conn.reply(m.chat, '*───「 Youtube Search 」───*\n\n' + teks, m)
+  }).filter(v => v).join('\n========================\n')
+  m.reply(teks)
 }
-handler.help = ['ytsearch <query>']
-handler.tags = ['tools', 'internet']
+handler.help = ['', 'earch'].map(v => 'yts' + v + ' <pencarian>')
+handler.tags = ['tools']
 handler.command = /^yts(earch)?$/i
+handler.limit = true
 
 module.exports = handler
+
