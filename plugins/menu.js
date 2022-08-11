@@ -322,16 +322,24 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Selamat pagi *_donate me for bot activation
+paypal : https://www.paypal.me/revkyramadhan33 
+dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Selamat siang *_donate me for bot activation
+paypal : https://www.paypal.me/revkyramadhan33 
+dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Selamat sore *_donate me for bot activation
+paypal : https://www.paypal.me/revkyramadhan33 
+dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Selamat malam *_donate me for bot activation
+paypal : https://www.paypal.me/revkyramadhan33 
+dana : 081802857821 thank for donate guys!!:>_*"
   }
   return res
 }
