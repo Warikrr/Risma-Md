@@ -27,8 +27,8 @@ const defaultMenu = {
 ┆⬡ *Bailyes Version* : 4.2.0
 ┆⬡ *Database* : %rtotalreg dari %totalreg
 ┆⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-┆⬡ *Instagram* :
-┆⬡ --
+┆⬡ *Instagram* : https://www.instagram.com/revkyrey/
+┆⬡ 
 ┗─────────────────⬣
 %readmore`.trim(),
   header: '┏━┈┈『 %category 』┈┈⬣',
@@ -322,24 +322,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
-    res = "Selamat pagi *_donate me for bot activation
-paypal : https://www.paypal.me/revkyramadhan33 
-dana : 081802857821 thank for donate guys!!:>_*"
+    res = "Selamat pagi *_donate me for bot activation paypal : https://www.paypal.me/revkyramadhan33 dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time > 10) {
-    res = "Selamat siang *_donate me for bot activation
-paypal : https://www.paypal.me/revkyramadhan33 
-dana : 081802857821 thank for donate guys!!:>_*"
+    res = "Selamat siang *_donate me for bot activation paypal : https://www.paypal.me/revkyramadhan33 dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time >= 15) {
-    res = "Selamat sore *_donate me for bot activation
-paypal : https://www.paypal.me/revkyramadhan33 
-dana : 081802857821 thank for donate guys!!:>_*"
+    res = "Selamat sore *_donate me for bot activation paypal : https://www.paypal.me/revkyramadhan33 dana : 081802857821 thank for donate guys!!:>_*"
   }
   if (time >= 18) {
-    res = "Selamat malam *_donate me for bot activation
-paypal : https://www.paypal.me/revkyramadhan33 
-dana : 081802857821 thank for donate guys!!:>_*"
+    res = "Selamat malam *_donate me for bot activation paypal : https://www.paypal.me/revkyramadhan33 dana : 081802857821 thank for donate guys!!:>_*"
   }
   return res
 }
