@@ -200,6 +200,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         title: 'Revky',
         rows: [
           { title: 'allmenu', rowId: `${_p}? all` },
+          { title: 'NameRevkyBoyRevman', rowId: `${_p}? all` },
           { title: 'info revky', rowId: `${_p}? infomursid` },
           { title: 'game', rowId: `${_p}? game` },
           { title: 'xp', rowId: `${_p}? xp` },
