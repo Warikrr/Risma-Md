@@ -190,7 +190,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         prefix: 'customPrefix' in plugin,
         limit: plugin.limit,
         premium: plugin.premium,
-        enabled: !plugin.disabled,
+        enabled: !plugin.enabled,
       }
     })
     if (teks == '404') {
