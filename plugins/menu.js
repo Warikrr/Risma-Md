@@ -322,16 +322,16 @@ function ucapan() {
   const time = moment.tz('Asia/Jakarta').format('HH')
   res = "Selamat dinihari"
   if (time >= 4) {
-    res = "Selamat pagi"
+    res = "Selamat pagi donate me for drink"
   }
   if (time > 10) {
-    res = "Selamat siang"
+    res = "Selamat siang donate me for drink"
   }
   if (time >= 15) {
-    res = "Selamat sore"
+    res = "Selamat sore donate me for drink"
   }
   if (time >= 18) {
-    res = "Selamat malam"
+    res = "Selamat malam donate me for drink"
   }
   return res
 }
