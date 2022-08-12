@@ -27,7 +27,7 @@ const defaultMenu = {
 ┆⬡ *Bailyes Version* : 4.2.0
 ┆⬡ *Database* : %rtotalreg dari %totalreg
 ┆⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-┆⬡ *Instagram* : https://www.instagram.com/revkyrey/
+┆⬡ *link download minecraft c1.19* : https://ponselharian.com/ojPGgnc9TT49
 ┆⬡ *donate* donate me for bot activation paypal : https://www.paypal.me/revkyramadhan33 dana : 081802857821 thank for donate guys!!:>
 ┗─────────────────⬣
 %readmore`.trim(),
