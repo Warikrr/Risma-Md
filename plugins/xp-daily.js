@@ -1,5 +1,5 @@
-const free = 500
-const prem = 5000
+const free = 900000000000000000000
+const prem = 9000000000000000000000
 let handler = async (m, { conn, usedPrefix, isPrems }) => {
   let user = db.data.users[m.sender]
   if (user.level < 1) return await conn.send3Button(m.chat, 'naikan level kamu', wm, 'Level Up', usedPrefix + 'levelup', 'Weekly', usedPrefix + 'weekly', 'Monthly', usedPrefix + 'monthly', m)

@@ -12,7 +12,7 @@ handler.before = async function (m, { isAdmin, isBotAdmin }) {
       if (!isBotAdmin) m.reply(` *「 ANTILINK 」* ${isAdmin ? "Admin mah bebas ygy :'v" : `\n\nlink group terdeteksi dan ${global.namabot} bukan admin jadi tidak bisa ngekick!`}`)
     if (isBotAdmin) {
       m.reply(` *「 ANTILINK 」* \n\nLink Group Terdeteksi, bye Kamu Akan Di Kick!!`.trim())
-      await this.delay(500)
+      await this.delay(5)
       await this.groupParticipantsUpdate(m.chat, [m.sender], "remove")
     }
   }
